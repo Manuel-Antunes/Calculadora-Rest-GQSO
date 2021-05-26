@@ -28,6 +28,6 @@ app.use('/multiplicacao', (req, res) => {
 app.use('/divisao', (req, res) => {
     res.status(400).json({ error: { message: "invalid endpoint" } })
 })
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('rodando');
 });
